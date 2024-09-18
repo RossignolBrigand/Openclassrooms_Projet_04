@@ -1,0 +1,5 @@
+To start server:
+
+
+To minify files: 
+run gulp using npx gulp
