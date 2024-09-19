@@ -33,10 +33,105 @@
 	<link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-unsplash.webp">
 
 	<!-- Scripts -->
-	<!-- <script src="./assets/js/schema.js"></script> -->
+	<script src="./assets/js/schema.js"></script> <!-- Choose whether to have a script fetched in or within the head -->
 	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	<script defer src="./assets/dist/combined.min.js"></script>
+
+	<!-- Test microdata -->
+ 	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+		  {
+			"@type": "LocalBusiness",
+			"name": "Nina Carducci Photographie",
+			"image": "../images/nina-carducci.webp",
+			"address": {
+			  "@type": "PostalAddress",
+			  "streetAddress": "68 avenue Alsace-Lorraine",
+			  "addressLocality": "Bordeaux",
+			  "postalCode": "33200",
+			  "addressCountry": "France"
+			},
+			"telephone": "0556677889",
+			"email": "contact@ninacarducci.fr",
+			"url": "https://ninacarducci.fr",
+			"description": "Photographe professionnelle spécialisée dans les mariages, portraits et évenements dans la région de Bordeaux",
+			"openingHours": "Mo-Fr 10:00-19:00",
+			"geo": {
+			  "@type": "GeoCoordinates",
+			  "latitude": "44.846690",
+			  "longitude": "-0.606590"
+			},
+			"sameAs": [
+			  "https://www.instagram.com/ninacarducci.photo/?hl=fr"
+			]
+		  },
+	
+		  {
+			"@type": "Service",
+			"serviceType": "Shooting photo",
+			"description": "Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos.",
+			"disambiguatingDescription": "Prix à la demi-journée. Matériel, déplacement inclus",
+			"offers": {
+			  "@type": "Offer",
+			  "price": "350",
+			  "priceCurrency": "EUR"
+			}
+		  },
+		  {
+			"@type": "Service",
+			"serviceType": "Retouches",
+			"description":"Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications",
+			"disambiguatingDescription":"Prix par photo. 2 AR par photo",
+			"offers": {
+			  "@type": "Offer",
+			  "price": "50",
+			  "priceCurrency": "EUR"
+			}
+		  },
+		  {
+			"@type": "Service",
+			"serviceType": "Albums photo",
+			"description":"Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé",
+			"disambiguatingDescription":"Prix par album. 30 pages recto/verso",
+			"offers": {
+			  "@type": "Offer",
+			  "price": "400",
+			  "priceCurrency": "EUR"
+			}
+		  },
+	
+		  {
+			"@context": "https://schema.org",
+			"@type": "BreadcrumbList",
+			"itemListElement": 
+			[{
+			  "@type": "ListItem",
+			  "position": 1,
+			  "name": "A propos",
+			  "item": "http://localhost:3000/#about"
+			},{
+			  "@type": "ListItem",
+			  "position": 2,
+			  "name": "Galerie",
+			  "item": "http://localhost:3000/#gallery"
+			},{
+			  "@type": "ListItem",
+			  "position": 3,
+			  "name": "Services",
+			  "item": "http://localhost:3000/#services"
+			},{
+			  "@type": "ListItem",
+			  "position": 4,
+			  "name": "Contact",
+			  "item": "http://localhost:3000/#contact"
+			}]
+		  }
+		]
+	}
+ 	</script>
 
 </head>
 <body>
@@ -81,7 +176,7 @@
 		</button>
 	</div>
 </article>
-<article id="about">
+<article id="about" itemscope>
 	<figure class="picture left">
 		<img src="./assets/images/nina-carducci.webp" alt="">
 	</figure>
@@ -90,13 +185,6 @@
 		<span class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</span>
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 		C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
-	</section>
-	<section class="contact-infos">
-		<h3>Informations</h3>
-		<p>Nina Carducci</p>
-		<p>Adresse: 68 avenue Alsace-Lorraine, 33200 Bordeaux.</p>
-		<p>Téléphone: 05 56 67 78 89</p>
-		<p>Disponibilités: du lundi au vendredi, de 10h à 19h.</p>
 	</section>
 </article>
 <article id="gallery">
@@ -189,5 +277,14 @@
 	</div>
 </article>
 </main>
+<footer>
+	<section class="contact-infos">
+		<h3>Informations</h3>
+		<p>Nina Carducci</p>
+		<p>Adresse: 68 avenue Alsace-Lorraine, 33200 Bordeaux.</p>
+		<p>Téléphone: 05 56 67 78 89</p>
+		<p>Disponibilités: du lundi au vendredi, de 10h à 19h.</p>
+	</section>
+</footer>
 </body>
 </html>

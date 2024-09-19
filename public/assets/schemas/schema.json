@@ -3,61 +3,89 @@
     "@graph": [
       {
         "@type": "LocalBusiness",
-        "name": "John Doe Photography",
-        "image": "https://www.yourwebsite.com/your-image.jpg",
+        "name": "Nina Carducci Photographie",
+        "image": "../images/nina-carducci.webp",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "123 Main Street",
-          "addressLocality": "Your City",
-          "addressRegion": "Your State",
-          "postalCode": "12345",
-          "addressCountry": "Your Country"
+          "streetAddress": "68 avenue Alsace-Lorraine",
+          "addressLocality": "Bordeaux",
+          "postalCode": "33200",
+          "addressCountry": "France"
         },
-        "telephone": "+1234567890",
-        "email": "contact@yourwebsite.com",
-        "url": "https://www.yourwebsite.com",
-        "description": "Professional photographer specializing in weddings, portraits, and events.",
-        "openingHours": "Mo-Su 09:00-18:00",
+        "telephone": "0556677889",
+        "email": "contact@ninacarducci.fr",
+        "url": "https://ninacarducci.fr",
+        "description": "Photographe professionnelle spécialisée dans les mariages, portraits et évenements dans la région de Bordeaux",
+        "openingHours": "Mo-Fr 10:00-19:00",
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "40.7127753",
-          "longitude": "-74.0059728"
+          "latitude": "44.846690",
+          "longitude": "-0.606590"
         },
         "sameAs": [
-          "https://www.facebook.com/yourphotography",
-          "https://www.instagram.com/yourphotography"
+          "https://www.instagram.com/ninacarducci.photo/?hl=fr"
         ]
       },
+
       {
         "@type": "Service",
-        "serviceType": "Wedding Photography",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "John Doe Photography",
-          "url": "https://www.yourwebsite.com"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "New York City"
-        },
+        "serviceType": "Shooting photo",
+        "description": "Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Île-de-France pour réaliser vos photos.",
+        "disambiguatingDescription": "Prix à la demi-journée. Matériel, déplacement inclus",
         "offers": {
           "@type": "Offer",
-          "price": "2000",
-          "priceCurrency": "USD"
+          "price": "350",
+          "priceCurrency": "EUR"
         }
       },
       {
-        "@type": "Review",
-        "author": {
-          "@type": "Person",
-          "name": "Jane Smith"
-        },
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5",
-          "bestRating": "5"
-        },
-        "reviewBody": "John Doe is a fantastic photographer! He captured our wedding perfectly."
+        "@type": "Service",
+        "serviceType": "Retouches",
+        "description":"Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications",
+        "disambiguatingDescription":"Prix par photo. 2 AR par photo",
+        "offers": {
+          "@type": "Offer",
+          "price": "50",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "Service",
+        "serviceType": "Albums photo",
+        "description":"Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé",
+        "disambiguatingDescription":"Prix par album. 30 pages recto/verso",
+        "offers": {
+          "@type": "Offer",
+          "price": "400",
+          "priceCurrency": "EUR"
+        }
+      },
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": 
+        [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "A propos",
+          "item": "http://localhost:3000/#about"
+        },{
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Galerie",
+          "item": "http://localhost:3000/#gallery"
+        },{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Services",
+          "item": "http://localhost:3000/#services"
+        },{
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "http://localhost:3000/#contact"
+        }]
       }
     ]
-  }
+}
