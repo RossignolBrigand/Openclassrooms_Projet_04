@@ -18,6 +18,7 @@
 	<link rel="preload" as="image" href="./assets/images/slider/ryoji-iwata-unsplash.webp">
 
 	<!-- Scripts -->
+	<script src="./assets/js/schema.js"></script>
 	<script defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script defer src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
 	<script defer src="./assets/dist/combined.min.js"></script>
@@ -30,7 +31,7 @@
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
-			<li><a href="#services">Service</a></li>
+			<li><a href="#services">Services</a></li>
 			<li><a href="#contact">Contact</a></li>
 			<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" aria-label="Visiter le profil Instagram de Nina Carducci"><img src="assets/images/instagram.png" alt=""></a></li>
 		</ul>
@@ -75,6 +76,13 @@
 		<p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 		C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</section>
+	<section class="contact-infos">
+		<h3>Informations</h3>
+		<p>Nina Carducci</p>
+		<p>Adresse: 68 avenue Alsace-Lorraine, 33200 Bordeaux.</p>
+		<p>Téléphone: 05 56 67 78 89</p>
+		<p>Disponibilités: du lundi au vendredi, de 10h à 19h.</p>
+	</section>
 </article>
 <article id="gallery">
 	<h2 class="title">Portfolio</h2>
@@ -102,7 +110,7 @@
 	</section>
 </article>
 <article id="services">
-	<h3 class="title">Mes services</h3>
+	<h2 class="title">Mes services</h2>
 	<div class="container">
 		<section class="service">
 			<div class="service__description">
@@ -146,24 +154,24 @@
 	</figure>
 </section>
 <article id="contact">
-	<section class="container">
-		<div class="form-container">
-			<h3>Une question ? Une demande de devis ?</h3>
+	<div class="container">
+		<section class="form-container">
+			<h2>Une question ? Une demande de devis ?</h2>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
-				<label>Nom</label>
+				<label for="nom">Nom</label>
 				<input type="text" name="nom" id="nom">
-				<label>Email</label>
+				<label for="email">Email</label>
 				<input type="email" name="email" id="email">
-				<label>Message</label>
+				<label for="message">Message</label>
 				<textarea name="message" id="message" cols="30" rows="10"></textarea>
 				<input type="submit" value="Envoyer"/>
 			</form>
-		</div>
+		</section>
 		<div class="picture right">
 			<img src="./assets/images/camera.webp" alt="">
 		</div>
-	</section>
+	</div>
 </article>
 </main>
 </body>

@@ -1,6 +1,6 @@
-To start server:
 
+To start server:
 node server.js
 
-To minify files: 
+To minify user css and js files: 
 run gulp using npx gulp
