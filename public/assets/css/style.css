@@ -222,6 +222,15 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+footer {
+	margin-left: 100px;
+}
+section.contact-infos {
+	padding-block: 30px;
+}
+#contact-name {
+	font-weight: 600;
+}
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
