@@ -67,19 +67,20 @@ body {
 	flex: 2
 }
 .about-me__title {
-	margin-top: 1em;
-	margin-bottom: 60px;
+	margin-bottom: 40px;
 	font-size: 30px;
 }
 .about-me__introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
+	font-size: large;
 	width: 60%;
 }
 #about-me p {
 	width: 80%;
 	font-size: 14px;
+	line-height: inherit;
 }
 .title{
 	text-align: center;
