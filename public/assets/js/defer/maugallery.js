@@ -146,17 +146,18 @@
         });
       }
       let index = 0,
-        next = null;
+        prev = null;
 
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
           index = i ;
         }
       });
-      next =
-        imagesCollection[index] ||
+      //! Iteration through loop was returning the actual img and not the previous one. index -1 will actually give preceding img and .length -1 allows to loop back through array.
+      prev =
+        imagesCollection[index - 1] ||
         imagesCollection[imagesCollection.length - 1];
-      $(".lightboxImage").attr("src", $(next).attr("src"));
+      $(".lightboxImage").attr("src", $(prev).attr("src"));
     },
     nextImage() {
       let activeImage = null;
@@ -192,8 +193,10 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      //! Iteration through loop was giving the actual element instead of the next one: index +1 targets the next element in the array.
+      next = imagesCollection[index + 1] || imagesCollection[0];
       $(".lightboxImage").attr("src", $(next).attr("src"));
+      console.log(next.attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
@@ -239,8 +242,9 @@
       if ($(this).hasClass("active-tag")) {
         return;
       }
+      //! Addition and removal of classes was wrong in order to make the CSS work properly
       $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
+      $(this).addClass("active active-tag");
 
       var tag = $(this).data("images-toggle");
 
