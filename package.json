@@ -20,7 +20,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "optionalDependencies": {
-  "iltorb": "~2.0.0",
-  "node-zopfli-es": "~1.0.3"
-}
+    "iltorb": "~2.0.0",
+    "node-zopfli-es": "~1.0.3"
+  }
 }

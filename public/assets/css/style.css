@@ -88,7 +88,7 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
+	color: #000;
 	background-color: #BEB45A;
 	border-radius:0 ;
 }
@@ -223,7 +223,7 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 footer {
-	margin-left: 100px;
+	margin-left: 2em;
 }
 section.contact-infos {
 	padding-block: 30px;
@@ -325,7 +325,7 @@ section.contact-infos {
 	.service {
 		max-width: 90%;
 	}
-	#about, #contact {
+	#about, #contact footer {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
